@@ -13,5 +13,7 @@ N_EPOCHS = 15
 # N_EPOCHS = 1
 LEARNING_RATE = 5e-6
 
-HF_DATASET_ID = "ibm/vira-intents-live"
-HF_MODEL_ID = f'ibm/{BASE_MODEL}-vira-intents-live'
+#HF_DATASET_ID = "ibm/vira-intents-live"
+HF_DATASET_ID = "ibm/vira-intents"
+#HF_MODEL_ID = f'ibm/{BASE_MODEL}-vira-intents-live'
+HF_MODEL_ID = f'ibm/{BASE_MODEL}-vira-intents'
