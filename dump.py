@@ -5,7 +5,7 @@
 from datasets import load_dataset
 
 
-dataset_path = 'ibm/vira-intents'
+dataset_path = 'vira-chatbot/vira-intents'
 dataset = load_dataset(dataset_path)
 
 
