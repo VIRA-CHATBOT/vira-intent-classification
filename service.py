@@ -9,10 +9,12 @@ import os
 import numpy as np
 import pandas as pd
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, TextClassificationPipeline
 
 from consts import HF_MODEL_ID
+from pydantic import BaseModel
+
 
 logging.config.fileConfig('logging.conf')
 log = logging.getLogger('services.dialog')
@@ -28,6 +30,13 @@ model_trained_intents = df['intent'].apply(str.strip).to_list()
 
 log.info('Service is ready')
 
+class Item(BaseModel):
+    session_id: str
+    text: str
+    feedback: str
+    answer: str
+    message_id: str
+    survey: str
 
 def get_model_predictions(candidates):
     log.info('Getting model predictions')
@@ -48,6 +57,9 @@ def read_root():
 def read_root():
     return "OK"
 
+@app.post("/classify")
+def read_root(text:  str = Body(...)):
+    return get_model_predictions([text])
 
 @app.get("/classify")
 def read_root(text: str):
