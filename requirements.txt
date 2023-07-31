@@ -1,6 +1,7 @@
 numpy
 pandas
 transformers
+xformers
 datasets
 fastapi
 uvicorn[standard]
