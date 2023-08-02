@@ -49,9 +49,6 @@ def read_root():
 def health():
     return "OK"
 
-@app.post("/classify")
-def read_root(text:  str = Body(...)):
-    return get_model_predictions([text])
 
 class RequestModel(BaseModel):
     text: str
@@ -71,7 +68,7 @@ def classify(request: RequestModel):
 def main():
     # intents, scores = classify("is the vaccine safe?")
     # print(intents, scores)
-    uvicorn.run(app, host="0.0.0.0", port=8110)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 
 if __name__ == '__main__':
