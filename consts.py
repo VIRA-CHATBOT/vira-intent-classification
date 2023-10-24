@@ -4,7 +4,8 @@
 #
 import os
 
-DATASET_DIR = os.path.join('.', 'intent_dataset')
+#DATASET_DIR = os.path.join('.', 'intent_dataset')
+DATASET_DIR = os.path.join('.', 'intent_dataset/jhu1.5')
 MODEL_DIR = os.path.join('.', 'intent_model')
 
 BASE_MODEL = 'roberta-large'
@@ -13,7 +14,9 @@ N_EPOCHS = 15
 # N_EPOCHS = 1
 LEARNING_RATE = 5e-6
 
-HF_DATASET_ID = "ibm/vira-intents-live"
+#HF_DATASET_ID = "ibm/vira-intents-live"
 #HF_DATASET_ID = "vira-chatbot/vira-intents-live"
-HF_MODEL_ID = f'ibm/{BASE_MODEL}-vira-intents-live'
+HF_DATASET_ID = "vira-chatbot/vira-intents-mod"
+#HF_MODEL_ID = f'ibm/{BASE_MODEL}-vira-intents-live'
 #HF_MODEL_ID = f'vira-chatbot/{BASE_MODEL}-vira-intents-live'
+HF_MODEL_ID = f'vira-chatbot/{BASE_MODEL}-vira-intents-mod'
