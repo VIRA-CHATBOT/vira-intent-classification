@@ -68,7 +68,7 @@ def classify(request: RequestModel):
 def main():
     # intents, scores = classify("is the vaccine safe?")
     # print(intents, scores)
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8040)
 
 
 if __name__ == '__main__':
