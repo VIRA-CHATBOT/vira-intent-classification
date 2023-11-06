@@ -1,4 +1,4 @@
-sentence,label,label_idx
+label,sentence,label_idx
 Do I need to continue safety measures after getting the vaccine?,"Even after getting my vaccine dose, do I continue adhering to preventive protocols?",1
 Do I need to continue safety measures after getting the vaccine?,Should I maintain safety precautions after my vaccination?,1
 Do I need to continue safety measures after getting the vaccine?,"Even though I have been vaccinated, should I still adhere to public health measures?",1
